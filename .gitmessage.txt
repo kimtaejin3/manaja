@@ -1,0 +1,7 @@
+- chore: 설정파일 수정시
+- build: 라이브러리 설치시
+- design: 스타일링 작업시
+- feat: 기능 구현시
+- fix: 구현한 기능의 이슈가 있을 경우 수정시
+- refactor: 코드 중복 제거 등 
+- docs: Readme 등의 문서 수정시
