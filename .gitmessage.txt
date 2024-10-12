@@ -9,3 +9,4 @@
 - add: 파일추가
 - rename: 파일명변경
 - move: 파일이동
+- update: 파일내용수정
