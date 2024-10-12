@@ -1,0 +1,8 @@
+@import "../../styles/global.scss";
+
+.container {
+  background-color: antiquewhite;
+  max-width: $max-width-val;
+  margin: 0 auto;
+  min-height: 100vh;
+}
