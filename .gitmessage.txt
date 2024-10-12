@@ -5,3 +5,7 @@
 - fix: 구현한 기능의 이슈가 있을 경우 수정시
 - refactor: 코드 중복 제거 등 
 - docs: Readme 등의 문서 수정시
+- remove: 파일제거
+- add: 파일추가
+- rename: 파일명변경
+- move: 파일이동
