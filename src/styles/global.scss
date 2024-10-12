@@ -1,4 +1,11 @@
 @import "./font.scss";
 @import "./reset.scss";
 
+// layout
 $max-width-val: 430px;
+
+// color
+$bg-container: white;
+
+// container(가운데 정렬된 430px)를 제외한 배경
+$bg-outside: #f0ebef;
