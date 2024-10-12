@@ -1,7 +1,7 @@
 @import "../../styles/global.scss";
 
 .container {
-  background-color: antiquewhite;
+  background-color: $bg-container;
   max-width: $max-width-val;
   margin: 0 auto;
   min-height: 100vh;
