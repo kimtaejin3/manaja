@@ -1,0 +1,7 @@
+$sub-text-color: #949494;
+
+@mixin subText {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: $sub-text-color;
+}

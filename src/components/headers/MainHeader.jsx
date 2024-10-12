@@ -6,7 +6,7 @@ export default function MainHeader() {
     <header className={styles.container}>
       <div>
         <h1>MANAJA</h1>
-        <p>퇴근 시간 후딱 정하기</p>
+        <p className={styles.subText}>회의 시간 후딱 정하기</p>
       </div>
       <button>
         <img src={hamburgerIcon} alt="hamburger_icon" />
