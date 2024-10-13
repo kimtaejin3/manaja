@@ -4,4 +4,13 @@
   label {
     @include mainText;
   }
+
+  input {
+    @include input;
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 1.4rem;
+  }
 }
