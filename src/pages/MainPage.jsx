@@ -6,7 +6,7 @@ export default function MainPage() {
   return (
     <>
       <MainHeader />
-      <MeetingNameField sx={{ marginTop: "40px" }} />
+      <MeetingNameField />
       <MeetingDaysField />
     </>
   );
