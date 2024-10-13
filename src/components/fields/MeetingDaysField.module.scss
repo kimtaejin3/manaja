@@ -1,7 +1,8 @@
 @import "../../styles/global.scss";
 
 .container {
-  margin-top: 40px;
+  margin-top: $field-gap;
+
   .header {
     display: flex;
     justify-content: space-between;

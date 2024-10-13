@@ -1,7 +1,7 @@
 @import "../../styles/global.scss";
 
 .container {
-  margin-top: 40px;
+  margin-top: $field-gap;
 
   label {
     @include mainText;
