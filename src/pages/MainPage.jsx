@@ -1,9 +1,11 @@
+import MeetingNameField from "../components/fields/MeetingNameField";
 import MainHeader from "../components/headers/MainHeader";
 
 export default function MainPage() {
   return (
-    <div>
+    <>
       <MainHeader />
-    </div>
+      <MeetingNameField sx={{ marginTop: "40px" }} />
+    </>
   );
 }
