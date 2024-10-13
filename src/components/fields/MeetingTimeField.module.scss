@@ -1,0 +1,9 @@
+@import "../../styles/global.scss";
+
+.container {
+  margin-top: $field-gap;
+
+  label {
+    @include mainText;
+  }
+}
