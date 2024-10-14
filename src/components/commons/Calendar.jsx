@@ -14,7 +14,26 @@ export default function Calendar() {
           <img src={arrowRightIcon} alt="arrow_right_icon" />
         </button>
       </div>
-      <div></div>
+      <div className={styles.calendar}>
+        <div className={styles.date}>
+          <span>일</span>
+          <span>월</span>
+          <span>화</span>
+          <span>수</span>
+          <span>목</span>
+          <span>금</span>
+          <span>토</span>
+        </div>
+        <div className={styles.day}>
+          {new Array(31).fill(0).map((val, index) => (
+            <div>
+              <span className={index === 15 ? styles.selected : ""}>
+                {index + 1}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

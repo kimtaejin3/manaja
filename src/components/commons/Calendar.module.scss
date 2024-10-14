@@ -10,4 +10,47 @@
       font-size: 1.4rem;
     }
   }
+
+  .calendar {
+    margin: 0 -10px;
+
+    .date {
+      margin-top: 20px;
+      display: flex;
+
+      span {
+        flex-grow: 1;
+        text-align: center;
+        font-size: 1.4rem;
+      }
+    }
+
+    .day {
+      margin-top: 10px;
+      display: grid;
+      row-gap: 7px;
+      grid-template-columns: repeat(7, 1fr);
+
+      div {
+        display: flex;
+        justify-content: center;
+      }
+
+      span {
+        background-color: $secondary;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.1rem;
+      }
+
+      .selected {
+        background-color: $primary;
+        color: white;
+      }
+    }
+  }
 }
