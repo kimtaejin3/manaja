@@ -10,16 +10,27 @@
   .timeSelection {
     margin-top: 10px;
     display: flex;
+    align-items: center;
     gap: 20px;
 
     div {
       flex-basis: 0;
       flex-grow: 1;
 
+      position: relative;
+
       select {
         width: 100%;
         @include input;
         padding: 8px 10px;
+        box-sizing: border-box;
+      }
+
+      span {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
   }
