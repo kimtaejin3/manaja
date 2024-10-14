@@ -24,4 +24,8 @@ $radius: 10px;
 @mixin input {
   border: 1px solid $input-border-color;
   border-radius: $radius;
+
+  &:focus {
+    border-color: $primary;
+  }
 }
