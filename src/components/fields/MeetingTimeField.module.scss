@@ -6,4 +6,19 @@
   label {
     @include mainText;
   }
+
+  .timeSelection {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+
+    div {
+      flex-basis: 0;
+      flex-grow: 1;
+
+      select {
+        width: 100%;
+      }
+    }
+  }
 }
