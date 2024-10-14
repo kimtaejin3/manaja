@@ -1,3 +1,4 @@
+import Button from "../components/commons/Button";
 import MeetingDaysField from "../components/fields/MeetingDaysField";
 import MeetingNameField from "../components/fields/MeetingNameField";
 import MeetingTimeField from "../components/fields/MeetingTimeField";
@@ -10,6 +11,7 @@ export default function MainPage() {
       <MeetingNameField />
       <MeetingDaysField />
       <MeetingTimeField />
+      <Button sx={{ marginTop: "20px" }}>완료</Button>
     </>
   );
 }

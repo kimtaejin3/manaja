@@ -1,0 +1,12 @@
+@import "../../styles/global.scss";
+
+.container {
+  background-color: $primary;
+  color: $btn-font-color;
+
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  border-radius: $radius;
+  padding: 10px 0;
+}
