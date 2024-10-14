@@ -11,7 +11,7 @@ export default function MainPage() {
       <MeetingNameField />
       <MeetingDaysField />
       <MeetingTimeField />
-      <Button sx={{ marginTop: "20px" }}>완료</Button>
+      <Button sx={{ marginTop: "40px" }}>완료</Button>
     </>
   );
 }
