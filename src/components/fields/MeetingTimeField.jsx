@@ -1,4 +1,5 @@
 import styles from "./MeetingTimeField.module.scss";
+import clockIcon from "../../assets/clock.svg";
 
 export default function MeetingTimeField() {
   return (
@@ -10,7 +11,9 @@ export default function MeetingTimeField() {
             <option>오전 12시</option>
             <option>오전 1시</option>
           </select>
-          <span>아이콘</span>
+          <span>
+            <img src={clockIcon} alt="clock_icon" />
+          </span>
         </div>
         <span>~</span>
         <div>
@@ -18,7 +21,9 @@ export default function MeetingTimeField() {
             <option>오전 12시</option>
             <option>오전 1시</option>
           </select>
-          <span>아이콘</span>
+          <span>
+            <img src={clockIcon} alt="clock_icon" />
+          </span>
         </div>
       </div>
     </div>
