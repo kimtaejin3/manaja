@@ -1,0 +1,13 @@
+@import "../../styles/global.scss";
+
+.container {
+  .header {
+    display: flex;
+    gap: 40px;
+
+    span {
+      @include mainText;
+      font-size: 1.4rem;
+    }
+  }
+}
