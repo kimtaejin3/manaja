@@ -7,12 +7,11 @@ import MainHeader from "../components/headers/MainHeader";
 export default function MainPage() {
   return (
     <>
-      {/* <MainHeader /> */}
-      {/* <MeetingNameField /> */}
-      {/* <MeetingDaysField /> */}
-      {/* <MeetingTimeField /> */}
-      {/* <Button sx={{ marginTop: "40px" }}>완료</Button> */}
-      main page
+      <MainHeader />
+      <MeetingNameField />
+      <MeetingDaysField />
+      <MeetingTimeField />
+      <Button sx={{ marginTop: "40px" }}>완료</Button>
     </>
   );
 }
