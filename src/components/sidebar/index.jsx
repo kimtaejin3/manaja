@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import closeIcon from "../../assets/close.svg";
 import styles from "./Sidebar.module.scss";
 
-export default function Sidebar({ onClose }) {
+export default function Sidebar({ onClose, className }) {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${className}`}>
       <CloseButton onClose={onClose} className={styles.closeButton} />
       <ul>
         <li>
