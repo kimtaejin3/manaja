@@ -2,6 +2,7 @@
 - build: 라이브러리 설치시
 - markup: 컴포넌트 html 마크업
 - design: 컴포넌트 스타일링 작업시
+- style: 부수적인 스타일 작업시
 - feat: 기능 구현시
 - fix: 구현한 기능의 이슈가 있을 경우 수정시
 - refactor: 코드 중복 제거 등 
