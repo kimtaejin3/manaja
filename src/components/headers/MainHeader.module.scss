@@ -18,4 +18,8 @@
   .subText {
     @include subText;
   }
+
+  .hamburgerButton {
+    cursor: pointer;
+  }
 }

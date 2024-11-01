@@ -8,7 +8,7 @@ export default function MainHeader() {
         <h1>MANAJA</h1>
         <p className={styles.subText}>회의 시간 후딱 정하기</p>
       </div>
-      <button>
+      <button className={styles.hamburgerButton}>
         <img src={hamburgerIcon} alt="hamburger_icon" />
       </button>
     </header>
