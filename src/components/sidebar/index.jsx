@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import closeIcon from "../../assets/close.svg";
 import styles from "./Sidebar.module.scss";
 
-export default function Sidebar() {
+export default function Sidebar({ onClose }) {
   return (
-    <div>
-      <CloseButton />
+    <div className={styles.container}>
+      <CloseButton onClose={onClose} />
       <ul>
         <li>
           <button>새로 만들기</button>
@@ -24,9 +24,9 @@ export default function Sidebar() {
   );
 }
 
-function CloseButton({ className }) {
+function CloseButton({ className, onClose }) {
   return (
-    <button className={className}>
+    <button className={className} onClick={onClose}>
       <img src={closeIcon} alt="사이드바 닫기 버튼" />
     </button>
   );
