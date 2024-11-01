@@ -5,7 +5,7 @@ import styles from "./Sidebar.module.scss";
 export default function Sidebar({ onClose }) {
   return (
     <div className={styles.container}>
-      <CloseButton onClose={onClose} />
+      <CloseButton onClose={onClose} className={styles.closeButton} />
       <ul>
         <li>
           <button>새로 만들기</button>
