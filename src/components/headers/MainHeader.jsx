@@ -23,7 +23,9 @@ export default function MainHeader() {
       <button className={styles.hamburgerButton} onClick={openSidebar}>
         <img src={hamburgerIcon} alt="hamburger_icon" />
       </button>
-      {isSidebarOpened && <Sidebar onClose={closeSidebar} />}
+      {isSidebarOpened && (
+        <Sidebar className={styles.sidebar} onClose={closeSidebar} />
+      )}
     </header>
   );
 }
