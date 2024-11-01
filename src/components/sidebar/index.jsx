@@ -16,7 +16,7 @@ export default function Sidebar({ onClose, className }) {
         <li>
           <Link to="/">로그인</Link>
           <p>
-            로그인 하시면 편리한 기능을 이용할 수 있어요! 도움말을 참고해주세요
+            로그인 하시면 편리한 기능을 이용할 수 있어요! 도움말을 참고해주세요.
           </p>
         </li>
       </ul>
