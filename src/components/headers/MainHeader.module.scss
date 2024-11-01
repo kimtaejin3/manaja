@@ -18,22 +18,6 @@
   .subText {
     @include subText;
   }
-
-  .hamburgerButton {
-    cursor: pointer;
-  }
-
-  .sidebar {
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    bottom: 0;
-    right: 0;
-
-    width: calc($max-width-val * (1 / 2));
-
-    animation: sidebarAnimation 0.5s;
-  }
 }
 
 @keyframes sidebarAnimation {
