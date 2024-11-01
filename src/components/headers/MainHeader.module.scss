@@ -31,5 +31,17 @@
     right: 0;
 
     width: calc($max-width-val * (1 / 2));
+
+    animation: sidebarAnimation 0.5s;
+  }
+}
+
+@keyframes sidebarAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
