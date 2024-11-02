@@ -10,9 +10,9 @@ export default function Calendar() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <PrevButton />
+        <PrevButton className={styles.calendarArrowButton} />
         <span>2024년 11월</span>
-        <NextButton />
+        <NextButton className={styles.calendarArrowButton} />
       </div>
       <div className={styles.calendar}>
         <div className={styles.date}>
@@ -34,9 +34,9 @@ export default function Calendar() {
   );
 }
 
-function PrevButton({ isActive = true }) {
+function PrevButton({ isActive = false, className }) {
   return (
-    <button>
+    <button className={className}>
       <img
         src={isActive ? arrowLeftIcon_active : arrowLeftIcon}
         alt="arrow_left_icon"
@@ -45,9 +45,9 @@ function PrevButton({ isActive = true }) {
   );
 }
 
-function NextButton({ isActive = false }) {
+function NextButton({ isActive = true, className }) {
   return (
-    <button>
+    <button className={className}>
       <img
         src={isActive ? arrowRightIcon_active : arrowRightIcon}
         alt="arrow_right_icon"

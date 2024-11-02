@@ -10,6 +10,10 @@
       @include mainText;
       font-size: 1.4rem;
     }
+
+    .calendarArrowButton {
+      cursor: pointer;
+    }
   }
 
   .calendar {
