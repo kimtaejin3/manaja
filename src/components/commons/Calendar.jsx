@@ -6,13 +6,13 @@ import arrowLeftIcon from "../../assets/arrow-left.svg";
 import arrowRightIcon from "../../assets/arrow-right.svg";
 import arrowLeftIcon_active from "../../assets/arrow-left_active.svg";
 import arrowRightIcon_active from "../../assets/arrow-right_active.svg";
-import { addMonths, isFuture, subMonths } from "date-fns";
+import { addMonths, getDaysInMonth, isFuture, subMonths } from "date-fns";
 
 const dates = ["일", "월", "화", "수", "목", "금", "토"];
 
 export default function Calendar() {
   const [date, setDate] = useState(new Date());
-  console.log(date);
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -36,8 +36,8 @@ export default function Calendar() {
           ))}
         </div>
         <div className={styles.day}>
-          {new Array(31).fill(0).map((val, index) => (
-            <div>
+          {new Array(getDaysInMonth(date)).fill().map((val, index) => (
+            <div key={index}>
               <span className={index === 15 ? styles.selected : ""}>
                 {index + 1}
               </span>
