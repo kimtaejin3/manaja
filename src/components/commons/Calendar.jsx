@@ -1,18 +1,33 @@
+import { useState } from "react";
+
 import styles from "./Calendar.module.scss";
+
 import arrowLeftIcon from "../../assets/arrow-left.svg";
 import arrowRightIcon from "../../assets/arrow-right.svg";
 import arrowLeftIcon_active from "../../assets/arrow-left_active.svg";
 import arrowRightIcon_active from "../../assets/arrow-right_active.svg";
+import { addMonths, isFuture, subMonths } from "date-fns";
 
 const dates = ["일", "월", "화", "수", "목", "금", "토"];
 
 export default function Calendar() {
+  const [date, setDate] = useState(new Date());
+  console.log(date);
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <PrevButton className={styles.calendarArrowButton} />
-        <span>2024년 11월</span>
-        <NextButton className={styles.calendarArrowButton} />
+        <PrevButton
+          isActive={isFuture(date)}
+          onClick={() => setDate(subMonths(date, 1))}
+          className={styles.calendarArrowButton}
+        />
+        <span>
+          {date.getFullYear()}년 {date.getMonth() + 1}월
+        </span>
+        <NextButton
+          className={styles.calendarArrowButton}
+          onClick={() => setDate(addMonths(date, 1))}
+        />
       </div>
       <div className={styles.calendar}>
         <div className={styles.date}>
@@ -34,9 +49,9 @@ export default function Calendar() {
   );
 }
 
-function PrevButton({ isActive = false, className }) {
+function PrevButton({ isActive = false, className, onClick }) {
   return (
-    <button className={className}>
+    <button disabled={!isActive} className={className} onClick={onClick}>
       <img
         src={isActive ? arrowLeftIcon_active : arrowLeftIcon}
         alt="arrow_left_icon"
@@ -45,9 +60,9 @@ function PrevButton({ isActive = false, className }) {
   );
 }
 
-function NextButton({ isActive = true, className }) {
+function NextButton({ isActive = true, className, onClick }) {
   return (
-    <button className={className}>
+    <button className={className} onClick={onClick}>
       <img
         src={isActive ? arrowRightIcon_active : arrowRightIcon}
         alt="arrow_right_icon"
