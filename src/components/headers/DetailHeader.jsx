@@ -1,6 +1,6 @@
 import styles from "./DetailHeader.module.scss";
-import hamburgerIcon from "../../assets/hamburger.svg";
 import shareIcon from "../../assets/share.svg";
+import SidebarWrap from "../commons/SidebarWrap";
 
 export default function DetailHeader({ title }) {
   return (
@@ -12,9 +12,7 @@ export default function DetailHeader({ title }) {
         <button>
           <img src={shareIcon} alt="share_icon" />
         </button>
-        <button>
-          <img src={hamburgerIcon} alt="hamburger_icon" />
-        </button>
+        <SidebarWrap />
       </div>
     </header>
   );
