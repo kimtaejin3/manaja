@@ -13,6 +13,7 @@ const dayes = ["일", "월", "화", "수", "목", "금", "토"];
 
 export default function Calendar() {
   const [date, setDate] = useState(new Date());
+  const [selectedDates, setSelectedDates] = useState([]);
 
   return (
     <div className={styles.container}>
@@ -38,14 +39,8 @@ export default function Calendar() {
         </div>
         <div className={styles.dateWrap}>
           {new Array(getDaysInMonth(date)).fill().map((val, index) => (
-            <div key={index}>
-              <span
-                className={`${styles.date} ${
-                  index === 15 ? styles.selected : ""
-                }`}
-              >
-                {index + 1}
-              </span>
+            <div key={index} className={styles.selected}>
+              <span className={styles.date}>{index + 1}</span>
             </div>
           ))}
         </div>

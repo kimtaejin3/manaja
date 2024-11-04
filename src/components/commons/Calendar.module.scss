@@ -41,23 +41,17 @@
         justify-content: center;
       }
 
+      div.selected {
+        color: white;
+        background-color: $primary;
+      }
+
       .date {
-        width: 3rem;
         height: 3rem;
-        border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 1.1rem;
-        cursor: pointer;
-
-        position: relative;
-        z-index: 1;
-      }
-
-      .selected {
-        background-color: $primary;
-        color: white;
       }
     }
   }
