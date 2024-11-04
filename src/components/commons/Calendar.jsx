@@ -39,7 +39,19 @@ export default function Calendar() {
         </div>
         <div className={styles.dateWrap}>
           {new Array(getDaysInMonth(date)).fill().map((val, index) => (
-            <div key={index} className={styles.selected}>
+            <div
+              key={index}
+              className={`${
+                selectedDates.includes(index + 1) ? styles.selected : ""
+              }`}
+              onClick={() => {
+                if (selectedDates.length < 2) {
+                  setSelectedDates([...selectedDates, index + 1]);
+                } else {
+                  setSelectedDates([index + 1]);
+                }
+              }}
+            >
               <span className={styles.date}>{index + 1}</span>
             </div>
           ))}
