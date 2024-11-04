@@ -40,7 +40,9 @@ export default function Calendar() {
           {new Array(getDaysInMonth(date)).fill().map((val, index) => (
             <div key={index}>
               <span
-                className={`${date} ${index === 15 ? styles.selected : ""}`}
+                className={`${styles.date} ${
+                  index === 15 ? styles.selected : ""
+                }`}
               >
                 {index + 1}
               </span>

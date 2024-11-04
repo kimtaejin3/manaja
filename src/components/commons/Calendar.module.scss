@@ -41,7 +41,12 @@
         justify-content: center;
       }
 
-      span {
+      .selected {
+        background-color: $primary;
+        color: white;
+      }
+
+      .date {
         background-color: $secondary;
         width: 3rem;
         height: 3rem;
@@ -51,11 +56,14 @@
         align-items: center;
         font-size: 1.1rem;
         cursor: pointer;
-      }
 
-      .selected {
-        background-color: $primary;
-        color: white;
+        &::before {
+          content: " ";
+          display: block;
+          width: 10px;
+          height: 10px;
+          background-color: red;
+        }
       }
     }
   }
