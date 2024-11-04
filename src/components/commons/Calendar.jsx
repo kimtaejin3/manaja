@@ -44,7 +44,9 @@ export default function Calendar() {
             <div
               key={index}
               className={`${
-                selectedDates[0] <= index + 1 && index + 1 <= selectedDates[1]
+                (selectedDates[0] <= index + 1 &&
+                  index + 1 <= selectedDates[1]) ||
+                selectedDates[0] === index + 1
                   ? styles.selected
                   : ""
               }`}
