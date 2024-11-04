@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { addMonths, getDaysInMonth, isFuture, subMonths } from "date-fns";
 
@@ -15,7 +15,9 @@ export default function Calendar() {
   const [date, setDate] = useState(new Date());
   const [selectedDates, setSelectedDates] = useState([]);
 
-  console.log(selectedDates);
+  useEffect(() => {
+    setSelectedDates([]);
+  }, [date]);
 
   return (
     <div className={styles.container}>
