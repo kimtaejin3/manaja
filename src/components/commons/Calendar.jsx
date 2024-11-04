@@ -49,6 +49,8 @@ export default function Calendar() {
                 selectedDates[0] === index + 1
                   ? styles.selected
                   : ""
+              } ${selectedDates[0] === index + 1 && styles.leftRounded} ${
+                selectedDates[1] === index + 1 && styles.rightRounded
               }`}
               onClick={() => {
                 if (selectedDates.length < 2) {
