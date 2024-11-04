@@ -16,6 +16,8 @@ export default function Calendar() {
   const [selectedDates, setSelectedDates] = useState([]);
 
   const handleDateSelect = (date) => {
+    if (selectedDates[0] === date) return;
+
     if (selectedDates.length < 2) {
       setSelectedDates([...selectedDates, date]);
       setSelectedDates((prevValue) => prevValue.sort((a, b) => a - b));
