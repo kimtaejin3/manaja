@@ -15,6 +15,15 @@ export default function Calendar() {
   const [date, setDate] = useState(new Date());
   const [selectedDates, setSelectedDates] = useState([]);
 
+  const handleDateSelect = (date) => {
+    if (selectedDates.length < 2) {
+      setSelectedDates([...selectedDates, date]);
+      setSelectedDates((prevValue) => prevValue.sort((a, b) => a - b));
+    } else {
+      setSelectedDates([date]);
+    }
+  };
+
   useEffect(() => {
     setSelectedDates([]);
   }, [date]);
@@ -56,16 +65,7 @@ export default function Calendar() {
                 selectedDates[0] === index + 1 &&
                 styles.leftRounded
               } ${selectedDates[1] === index + 1 && styles.rightRounded}`}
-              onClick={() => {
-                if (selectedDates.length < 2) {
-                  setSelectedDates([...selectedDates, index + 1]);
-                  setSelectedDates((prevValue) =>
-                    prevValue.sort((a, b) => a - b)
-                  );
-                } else {
-                  setSelectedDates([index + 1]);
-                }
-              }}
+              onClick={() => handleDateSelect(index + 1)}
             >
               <span className={styles.date}>{index + 1}</span>
             </div>
