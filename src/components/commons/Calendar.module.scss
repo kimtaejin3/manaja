@@ -41,11 +41,6 @@
         justify-content: center;
       }
 
-      .selected {
-        background-color: $primary;
-        color: white;
-      }
-
       .date {
         background-color: $secondary;
         width: 3rem;
@@ -57,13 +52,13 @@
         font-size: 1.1rem;
         cursor: pointer;
 
-        &::before {
-          content: " ";
-          display: block;
-          width: 10px;
-          height: 10px;
-          background-color: red;
-        }
+        position: relative;
+        z-index: 1;
+      }
+
+      .selected {
+        background-color: $primary;
+        color: white;
       }
     }
   }
