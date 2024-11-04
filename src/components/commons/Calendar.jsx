@@ -1,14 +1,15 @@
 import { useState } from "react";
 
+import { addMonths, getDaysInMonth, isFuture, subMonths } from "date-fns";
+
 import styles from "./Calendar.module.scss";
 
 import arrowLeftIcon from "../../assets/arrow-left.svg";
 import arrowRightIcon from "../../assets/arrow-right.svg";
 import arrowLeftIcon_active from "../../assets/arrow-left_active.svg";
 import arrowRightIcon_active from "../../assets/arrow-right_active.svg";
-import { addMonths, getDaysInMonth, isFuture, subMonths } from "date-fns";
 
-const dates = ["일", "월", "화", "수", "목", "금", "토"];
+const dayes = ["일", "월", "화", "수", "목", "금", "토"];
 
 export default function Calendar() {
   const [date, setDate] = useState(new Date());
@@ -30,15 +31,17 @@ export default function Calendar() {
         />
       </div>
       <div className={styles.calendar}>
-        <div className={styles.date}>
-          {dates.map((date) => (
-            <span key={date}>{date}</span>
+        <div className={styles.day}>
+          {dayes.map((day) => (
+            <span key={day}>{day}</span>
           ))}
         </div>
-        <div className={styles.day}>
+        <div className={styles.dateWrap}>
           {new Array(getDaysInMonth(date)).fill().map((val, index) => (
             <div key={index}>
-              <span className={index === 15 ? styles.selected : ""}>
+              <span
+                className={`${date} ${index === 15 ? styles.selected : ""}`}
+              >
                 {index + 1}
               </span>
             </div>

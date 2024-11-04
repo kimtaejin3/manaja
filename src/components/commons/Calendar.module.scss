@@ -19,7 +19,7 @@
   .calendar {
     margin: 0 -10px;
 
-    .date {
+    .day {
       margin-top: 20px;
       display: flex;
 
@@ -30,7 +30,7 @@
       }
     }
 
-    .day {
+    .dateWrap {
       margin-top: 10px;
       display: grid;
       row-gap: 7px;
