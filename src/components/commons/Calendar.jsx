@@ -15,6 +15,8 @@ export default function Calendar() {
   const [date, setDate] = useState(new Date());
   const [selectedDates, setSelectedDates] = useState([]);
 
+  console.log(selectedDates);
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -42,11 +44,16 @@ export default function Calendar() {
             <div
               key={index}
               className={`${
-                selectedDates.includes(index + 1) ? styles.selected : ""
+                selectedDates[0] <= index + 1 && index + 1 <= selectedDates[1]
+                  ? styles.selected
+                  : ""
               }`}
               onClick={() => {
                 if (selectedDates.length < 2) {
                   setSelectedDates([...selectedDates, index + 1]);
+                  setSelectedDates((prevValue) =>
+                    prevValue.sort((a, b) => a - b)
+                  );
                 } else {
                   setSelectedDates([index + 1]);
                 }
