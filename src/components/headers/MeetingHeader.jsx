@@ -1,8 +1,8 @@
-import styles from "./DetailHeader.module.scss";
+import styles from "./MeetingHeader.module.scss";
 import shareIcon from "../../assets/share.svg";
 import SidebarWrap from "../shared/SidebarWrap";
 
-export default function DetailHeader({ title }) {
+export default function MeetingHeader({ title }) {
   return (
     <header className={styles.container}>
       <div>

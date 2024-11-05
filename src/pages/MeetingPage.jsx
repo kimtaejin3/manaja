@@ -1,9 +1,9 @@
-import DetailHeader from "../components/headers/DetailHeader";
+import MeetingHeader from "../components/headers/MeetingHeader";
 
 export default function DetailPage() {
   return (
     <>
-      <DetailHeader title="멋쟁이 사자처럼" />
+      <MeetingHeader title="멋쟁이 사자처럼" />
     </>
   );
 }
