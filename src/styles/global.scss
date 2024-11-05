@@ -5,3 +5,11 @@
 body {
   background-color: $bg-outside;
 }
+
+@media (hover: hover) {
+  /* when supported */
+  button:hover {
+    color: initial;
+    background: initial;
+  }
+}
