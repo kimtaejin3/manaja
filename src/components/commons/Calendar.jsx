@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 
-import { addMonths, getDaysInMonth, isFuture, subMonths } from "date-fns";
+import {
+  addMonths,
+  getDaysInMonth,
+  isFuture,
+  subMonths,
+  getMonth,
+} from "date-fns";
 
 import styles from "./Calendar.module.scss";
 
@@ -14,21 +20,20 @@ const dayes = ["일", "월", "화", "수", "목", "금", "토"];
 export default function Calendar() {
   const [date, setDate] = useState(new Date());
   const [selectedDates, setSelectedDates] = useState([]);
+  const [monthOfSelectedDates, setMonthOfSelectedDates] = useState(null);
 
-  const handleDateSelect = (date) => {
-    if (selectedDates[0] === date) return;
+  const handleDateSelect = (value) => {
+    if (selectedDates[0] === value) return;
+
+    setMonthOfSelectedDates(getMonth(date));
 
     if (selectedDates.length < 2) {
-      setSelectedDates([...selectedDates, date]);
+      setSelectedDates([...selectedDates, value]);
       setSelectedDates((prevValue) => prevValue.sort((a, b) => a - b));
     } else {
-      setSelectedDates([date]);
+      setSelectedDates([value]);
     }
   };
-
-  useEffect(() => {
-    setSelectedDates([]);
-  }, [date]);
 
   return (
     <div className={styles.container}>
@@ -57,11 +62,11 @@ export default function Calendar() {
             <div
               key={index}
               className={`${
-                (selectedDates[0] <= index + 1 &&
+                monthOfSelectedDates === getMonth(date) &&
+                ((selectedDates[0] <= index + 1 &&
                   index + 1 <= selectedDates[1]) ||
-                selectedDates[0] === index + 1
-                  ? styles.selected
-                  : ""
+                  selectedDates[0] === index + 1) &&
+                styles.selected
               } ${
                 selectedDates.length > 1 &&
                 selectedDates[0] === index + 1 &&
