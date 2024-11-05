@@ -1,4 +1,4 @@
-import Calendar from "../commons/Calendar";
+import Calendar from "../shared/Calendar";
 import styles from "./MeetingDaysField.module.scss";
 
 export default function MeetingDaysField({ sx }) {

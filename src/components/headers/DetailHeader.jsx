@@ -1,6 +1,6 @@
 import styles from "./DetailHeader.module.scss";
 import shareIcon from "../../assets/share.svg";
-import SidebarWrap from "../commons/SidebarWrap";
+import SidebarWrap from "../shared/SidebarWrap";
 
 export default function DetailHeader({ title }) {
   return (
