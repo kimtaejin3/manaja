@@ -4,6 +4,8 @@ import MeetingNameField from "../components/fields/MeetingNameField";
 import MeetingTimeField from "../components/fields/MeetingTimeField";
 import MainHeader from "../components/headers/MainHeader";
 
+import styles from "./MainPage.module.scss";
+
 export default function MainPage() {
   return (
     <>
@@ -11,7 +13,7 @@ export default function MainPage() {
       <MeetingNameField />
       <MeetingDaysField />
       <MeetingTimeField />
-      <Button>완료</Button>
+      <Button className={styles.button}>완료</Button>
     </>
   );
 }
