@@ -1,4 +1,5 @@
 import SidebarWrap from "../shared/SidebarWrap";
+
 import styles from "./MainHeader.module.scss";
 
 export default function MainHeader() {

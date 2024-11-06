@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
-import closeIcon from "../../assets/close.svg";
+
 import styles from "./Sidebar.module.scss";
+
+import closeIcon from "../../assets/close.svg";
 
 export default function Sidebar({ onClose, className }) {
   return (
