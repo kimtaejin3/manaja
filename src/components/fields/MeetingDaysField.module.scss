@@ -4,18 +4,12 @@
 .container {
   margin-top: $field-gap;
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  label {
+    @include mainText;
+  }
 
-    label {
-      @include mainText;
-    }
-
-    p {
-      @include subText-small;
-    }
+  p {
+    @include subText-small;
   }
 
   .calendarField {
