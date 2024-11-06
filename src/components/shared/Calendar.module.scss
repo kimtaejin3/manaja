@@ -14,7 +14,6 @@
 
     .calendarArrowButton {
       cursor: pointer;
-      // padding: 5px 9px;
       width: 30px;
       height: 30px;
 
@@ -23,10 +22,6 @@
       justify-content: center;
 
       border-radius: 999px;
-
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.05);
-      }
     }
   }
 
@@ -85,7 +80,6 @@
 @media (hover: hover) {
   /* when supported */
   .calendarArrowButton:hover {
-    color: initial;
-    background: initial;
+    background-color: rgba(0, 0, 0, 0.05);
   }
 }
