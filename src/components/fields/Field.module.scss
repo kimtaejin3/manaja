@@ -1,0 +1,10 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.container {
+  margin-top: $field-gap;
+
+  label {
+    @include mainText;
+  }
+}

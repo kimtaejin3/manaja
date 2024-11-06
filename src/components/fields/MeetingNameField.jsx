@@ -1,10 +1,10 @@
+import Field from "./Field";
 import styles from "./MeetingNameField.module.scss";
 
-export default function MeetingNameField({ sx }) {
+export default function MeetingNameField() {
   return (
-    <div style={sx} className={styles.container}>
-      <label>회의 이름 정하기</label>
+    <Field title="회의 이름" className={styles.container}>
       <input type="text" />
-    </div>
+    </Field>
   );
 }

@@ -1,10 +1,10 @@
 import styles from "./MeetingTimeField.module.scss";
 import clockIcon from "../../assets/clock.svg";
+import Field from "./Field";
 
 export default function MeetingTimeField() {
   return (
-    <div className={styles.container}>
-      <label>시간대 정하기</label>
+    <Field className={styles.container} title="회의 시간대 정하기">
       <div className={styles.timeSelection}>
         <div>
           <Select />
@@ -20,7 +20,7 @@ export default function MeetingTimeField() {
           </span>
         </div>
       </div>
-    </div>
+    </Field>
   );
 }
 
