@@ -81,3 +81,11 @@
     }
   }
 }
+
+@media (hover: hover) {
+  /* when supported */
+  .calendarArrowButton:hover {
+    color: initial;
+    background: initial;
+  }
+}
