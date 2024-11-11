@@ -1,4 +1,4 @@
-import React, { memo, useState } from "react";
+import React, { memo, useCallback, useState } from "react";
 
 import { DayPicker } from "react-day-picker";
 import { ko } from "date-fns/locale";
@@ -71,7 +71,7 @@ const dayPickerCustomCss = `
   }
   
   .rdp-month_grid {
-    width: 109%;
+    width: 110%;
     margin-left: -5%;
   }
 
