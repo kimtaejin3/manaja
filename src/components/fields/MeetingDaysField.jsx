@@ -71,8 +71,8 @@ const dayPickerCustomCss = `
   }
   
   .rdp-month_grid {
-    width: 100%;
-    row-gap: 20px;
+    width: 109%;
+    margin-left: -5%;
   }
 
   .rdp-weekday{
