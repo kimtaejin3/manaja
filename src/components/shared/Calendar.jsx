@@ -6,6 +6,7 @@ import {
   isFuture,
   subMonths,
   getMonth,
+  setDate as changeDate,
 } from "date-fns";
 
 import styles from "./Calendar.module.scss";
@@ -22,16 +23,19 @@ export default function Calendar() {
   const [selectedDates, setSelectedDates] = useState([]);
   const [monthOfSelectedDates, setMonthOfSelectedDates] = useState(null);
 
+  console.log("date:", date);
+  console.log("selectedDates:", selectedDates);
+
   const handleDateSelect = (value) => {
     if (selectedDates[0] === value) return;
 
     setMonthOfSelectedDates(getMonth(date));
 
     if (selectedDates.length < 2) {
-      setSelectedDates([...selectedDates, value]);
+      setSelectedDates([...selectedDates, changeDate(date, value)]);
       setSelectedDates((prevValue) => prevValue.sort((a, b) => a - b));
     } else {
-      setSelectedDates([value]);
+      setSelectedDates([changeDate(date, value)]);
     }
   };
 
@@ -62,10 +66,7 @@ export default function Calendar() {
             <div
               key={index}
               className={`${
-                monthOfSelectedDates === getMonth(date) &&
-                ((selectedDates[0] <= index + 1 &&
-                  index + 1 <= selectedDates[1]) ||
-                  selectedDates[0] === index + 1) &&
+                selectedDates.includes(changeDate(date, index + 1)) &&
                 styles.selected
               } ${
                 selectedDates.length > 1 &&
