@@ -5,12 +5,17 @@ import MeetingTimeField from "../components/fields/MeetingTimeField";
 import MainHeader from "../components/headers/MainHeader";
 
 import styles from "./MainPage.module.scss";
+import { useState } from "react";
 
 export default function MainPage() {
+  const [name, setName] = useState("");
   return (
     <div className={styles.container}>
       <MainHeader />
-      <MeetingNameField />
+      <MeetingNameField
+        name={name}
+        onChangeName={(newName) => setName(newName)}
+      />
       <MeetingDaysField />
       <MeetingTimeField />
       <Button className={styles.button}>완료</Button>
