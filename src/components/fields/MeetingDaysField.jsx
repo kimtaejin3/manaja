@@ -79,8 +79,13 @@ const dayPickerCustomCss = `
     font-size: 1.3rem;
   }
 
+  .rdp-selected {
+    font-weight: normal;
+  }
+
   .rdp-day {
     font-size: 1.3rem;
+    width: 40px;
   }
 
   .rdp-day_button {
