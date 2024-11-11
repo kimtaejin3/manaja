@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 
 import { DayPicker } from "react-day-picker";
 import { ko } from "date-fns/locale";
@@ -91,4 +91,4 @@ const dayPickerCustomCss = `
 
 `;
 
-export default MeetingDaysField;
+export default memo(MeetingDaysField);
