@@ -1,7 +1,9 @@
 import styles from "./Button.module.scss";
 
-export default function Button({ children, className }) {
+export default function Button({ children, className, onClick }) {
   return (
-    <button className={`${styles.container} ${className}`}>{children}</button>
+    <button onClick={onClick} className={`${styles.container} ${className}`}>
+      {children}
+    </button>
   );
 }

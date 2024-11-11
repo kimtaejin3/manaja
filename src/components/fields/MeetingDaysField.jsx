@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useState } from "react";
+import React, { memo } from "react";
 
 import { DayPicker } from "react-day-picker";
 import { ko } from "date-fns/locale";
@@ -7,24 +7,9 @@ import Field from "./Field";
 
 import styles from "./MeetingDaysField.module.scss";
 import "react-day-picker/style.css";
-import { format, isEqual } from "date-fns";
+import { format } from "date-fns";
 
-function MeetingDaysField() {
-  const [selected, setSelected] = useState();
-
-  const handleSelect = (newSelected) => {
-    // Update the selected dates
-    if (!isEqual(selected?.from, selected?.to)) {
-      if (isEqual(selected?.to, newSelected.to)) {
-        setSelected({ from: newSelected.from, to: newSelected.from });
-      } else {
-        setSelected({ from: newSelected.to, to: newSelected.to });
-      }
-      return;
-    }
-    setSelected(newSelected);
-  };
-
+function MeetingDaysField({ selectedDates, onSelect }) {
   return (
     <Field className={styles.container} title="회의 후보 날짜 선택">
       <div className={styles["wrap-calendar"]}>
@@ -32,8 +17,8 @@ function MeetingDaysField() {
         <DayPicker
           mode="range"
           locale={ko}
-          selected={selected}
-          onSelect={handleSelect}
+          selected={selectedDates}
+          onSelect={onSelect}
           formatters={{
             formatCaption: () => format(new Date(), "yyyy년 MM월"),
           }}
