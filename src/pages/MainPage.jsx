@@ -7,6 +7,7 @@ import MainHeader from "../components/headers/MainHeader";
 import styles from "./MainPage.module.scss";
 import { useCallback, useState } from "react";
 import { isEqual } from "date-fns";
+import Toast from "../components/shared/Toast";
 
 export default function MainPage() {
   const [name, setName] = useState("");
@@ -38,6 +39,7 @@ export default function MainPage() {
 
   return (
     <div className={styles.container}>
+      <Toast />
       <MainHeader />
       <MeetingNameField
         name={name}
