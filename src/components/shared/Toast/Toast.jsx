@@ -1,12 +1,17 @@
 import ToastPortal from "./ToastPortal";
 import styles from "./Toast.module.scss";
 
-function Toast({ message }) {
+function Toast({ isOpen, onClose, children }) {
+  if (!isOpen) {
+    return <></>;
+  }
+
   return (
     <ToastPortal>
       <div className={styles.container}>
+        <button onClick={onClose}>x</button>
         <WarningIcon className={styles["ico-warning"]} />
-        <p>{message}</p>
+        <p>{children}</p>
       </div>
     </ToastPortal>
   );

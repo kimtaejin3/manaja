@@ -8,11 +8,14 @@ import styles from "./MainPage.module.scss";
 import { useCallback, useState } from "react";
 import { isEqual } from "date-fns";
 import Toast from "../components/shared/Toast";
+import useToast from "../hooks/useToast";
 
 export default function MainPage() {
   const [name, setName] = useState("");
   const [time, setTime] = useState("");
   const [selectedDates, setSelectedDates] = useState();
+
+  const { isOpen, openToast, closeToast } = useToast();
 
   const handleSelect = useCallback(
     (newSelected) => {
@@ -32,6 +35,10 @@ export default function MainPage() {
 
   const handleSubmit = () => {
     console.log("btn clicked");
+    if (!name || !time || !selectedDates) {
+      openToast();
+      return;
+    }
     console.log(name);
     console.log(time);
     console.log(selectedDates);
@@ -39,7 +46,6 @@ export default function MainPage() {
 
   return (
     <div className={styles.container}>
-      <Toast />
       <MainHeader />
       <MeetingNameField
         name={name}
@@ -50,6 +56,11 @@ export default function MainPage() {
       <Button onClick={handleSubmit} className={styles.button}>
         완료
       </Button>
+      <Toast
+        isOpen={isOpen}
+        onClose={closeToast}
+        message="입력되지 않은 값이 있습니다."
+      />
     </div>
   );
 }
