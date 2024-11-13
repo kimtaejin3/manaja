@@ -38,30 +38,30 @@ function Select({ type, time, onSelect }) {
         }
       }}
     >
-      <option value="오전 12시">오전 12시</option>
-      <option value="오전 1시">오전 1시</option>
-      <option value="오전 2시">오전 2시</option>
-      <option value="오전 3시">오전 3시</option>
-      <option value="오전 4시">오전 4시</option>
-      <option value="오전 5시">오전 5시</option>
-      <option value="오전 6시">오전 6시</option>
-      <option value="오전 7시">오전 7시</option>
-      <option value="오전 8시">오전 8시</option>
-      <option value="오전 9시">오전 9시</option>
-      <option value="오전 10시">오전 10시</option>
-      <option value="오전 11시">오전 11시</option>
-      <option value="오전 12시">오후 12시</option>
-      <option value="오후 1시">오후 1시</option>
-      <option value="오후 2시">오후 2시</option>
-      <option value="오후 3시">오후 3시</option>
-      <option value="오후 4시">오후 4시</option>
-      <option value="오후 5시">오후 5시</option>
-      <option value="오후 6시">오후 6시</option>
-      <option value="오후 7시">오후 7시</option>
-      <option value="오후 8시">오후 8시</option>
-      <option value="오후 9시">오후 9시</option>
-      <option value="오후 10시">오후 10시</option>
-      <option value="오후 11시">오후 11시</option>
+      <option value="12-am">오전 12시</option>
+      <option value="1-am">오전 1시</option>
+      <option value="2-am">오전 2시</option>
+      <option value="3-am">오전 3시</option>
+      <option value="4-am">오전 4시</option>
+      <option value="5-am">오전 5시</option>
+      <option value="6-am">오전 6시</option>
+      <option value="7-am">오전 7시</option>
+      <option value="8-am">오전 8시</option>
+      <option value="9-am">오전 9시</option>
+      <option value="10-am">오전 10시</option>
+      <option value="11-am">오전 11시</option>
+      <option value="12-pm">오후 12시</option>
+      <option value="1-pm">오후 1시</option>
+      <option value="2-pm">오후 2시</option>
+      <option value="3-pm">오후 3시</option>
+      <option value="4-pm">오후 4시</option>
+      <option value="5-pm">오후 5시</option>
+      <option value="6-pm">오후 6시</option>
+      <option value="7-pm">오후 7시</option>
+      <option value="8-pm">오후 8시</option>
+      <option value="9-pm">오후 9시</option>
+      <option value="10-pm">오후 10시</option>
+      <option value="11-pm">오후 11시</option>
     </select>
   );
 }
