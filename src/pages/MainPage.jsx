@@ -38,13 +38,19 @@ export default function MainPage() {
     console.log("res:", res);
   };
 
-  const handleSubmit = () => {
+  const validateForm = () => {
     if (!name || !time || !selectedDates) {
       openToast("입력되지 않은 값이 있습니다.");
-      return;
+      return false;
     }
 
-    createMeeting({ name, time, dates: selectedDates });
+    return true;
+  };
+
+  const handleSubmit = () => {
+    if (validateForm()) {
+      createMeeting({ name, time, dates: selectedDates });
+    }
   };
 
   return (
