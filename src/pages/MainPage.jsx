@@ -9,10 +9,11 @@ import { useCallback, useState } from "react";
 import { isEqual } from "date-fns";
 import Toast from "../components/shared/Toast";
 import useToast from "../hooks/useToast";
+import { createMeetingAsync } from "../api/meeting";
 
 export default function MainPage() {
   const [name, setName] = useState("");
-  const [time, setTime] = useState("");
+  const [time, setTime] = useState({ start: "12-am", end: "12-am" });
   const [selectedDates, setSelectedDates] = useState();
 
   const { isOpen, message, openToast, closeToast } = useToast();
@@ -32,14 +33,18 @@ export default function MainPage() {
     [selectedDates]
   );
 
+  const createMeeting = async ({ name, time, dates }) => {
+    const res = await createMeetingAsync({ name, time, dates });
+    console.log("res:", res);
+  };
+
   const handleSubmit = () => {
     if (!name || !time || !selectedDates) {
       openToast("입력되지 않은 값이 있습니다.");
       return;
     }
-    console.log(name);
-    console.log(time);
-    console.log(selectedDates);
+
+    createMeeting({ name, time, dates: selectedDates });
   };
 
   return (
