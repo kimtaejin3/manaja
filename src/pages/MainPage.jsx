@@ -14,7 +14,7 @@ import { createMeetingAsync } from "../api/meeting";
 export default function MainPage() {
   const [name, setName] = useState("");
   const [time, setTime] = useState({ start: "12-am", end: "12-am" });
-  const [selectedDates, setSelectedDates] = useState();
+  const [selectedDates, setSelectedDates] = useState(null);
 
   const { isOpen, message, openToast, closeToast } = useToast();
 
