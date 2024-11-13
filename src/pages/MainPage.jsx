@@ -15,7 +15,7 @@ export default function MainPage() {
   const [time, setTime] = useState("");
   const [selectedDates, setSelectedDates] = useState();
 
-  const { isOpen, openToast, closeToast } = useToast();
+  const { isOpen, message, openToast, closeToast } = useToast();
 
   const handleSelect = useCallback(
     (newSelected) => {
@@ -33,9 +33,8 @@ export default function MainPage() {
   );
 
   const handleSubmit = () => {
-    console.log("btn clicked");
     if (!name || !time || !selectedDates) {
-      openToast();
+      openToast("입력되지 않은 값이 있습니다.");
       return;
     }
     console.log(name);
@@ -56,7 +55,7 @@ export default function MainPage() {
         완료
       </Button>
       <Toast isOpen={isOpen} onClose={closeToast}>
-        입력되지 않은 값이 있습니다.
+        {message}
       </Toast>
     </div>
   );

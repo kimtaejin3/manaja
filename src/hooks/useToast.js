@@ -2,9 +2,11 @@ import { useState } from "react";
 
 function useToast() {
   const [isOpen, setIsOpen] = useState(false);
+  const [message, setMessage] = useState("");
 
-  const openToast = () => {
+  const openToast = (message) => {
     setIsOpen(true);
+    setMessage(message);
   };
 
   const closeToast = () => {
@@ -13,6 +15,7 @@ function useToast() {
 
   return {
     isOpen,
+    message,
     openToast,
     closeToast,
   };
