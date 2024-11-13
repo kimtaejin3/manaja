@@ -19,7 +19,6 @@ export default function MainPage() {
 
   const handleSelect = useCallback(
     (newSelected) => {
-      // Update the selected dates
       if (!isEqual(selectedDates?.from, selectedDates?.to)) {
         if (isEqual(selectedDates?.to, newSelected.to)) {
           setSelectedDates({ from: newSelected.from, to: newSelected.from });
@@ -56,11 +55,9 @@ export default function MainPage() {
       <Button onClick={handleSubmit} className={styles.button}>
         완료
       </Button>
-      <Toast
-        isOpen={isOpen}
-        onClose={closeToast}
-        message="입력되지 않은 값이 있습니다."
-      />
+      <Toast isOpen={isOpen} onClose={closeToast}>
+        입력되지 않은 값이 있습니다.
+      </Toast>
     </div>
   );
 }
