@@ -11,9 +11,11 @@ import Toast from "../components/shared/Toast";
 import useToast from "../hooks/useToast";
 import { createMeetingAsync } from "../api/meeting";
 
+const INITIAL_TIME = { start: "12-am", end: "12-am" };
+
 export default function MainPage() {
   const [name, setName] = useState("");
-  const [time, setTime] = useState({ start: "12-am", end: "12-am" });
+  const [time, setTime] = useState(INITIAL_TIME);
   const [selectedDates, setSelectedDates] = useState(null);
 
   const { isOpen, message, openToast, closeToast } = useToast();
