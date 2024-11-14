@@ -1,7 +1,7 @@
 import { BASE_URL } from "./constants";
 
 const createMeetingAsync = async ({ name, time, dates }) => {
-  const data = await fetch(`${BASE_URL}`, {
+  const res = await fetch(`${BASE_URL}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -12,8 +12,20 @@ const createMeetingAsync = async ({ name, time, dates }) => {
       dates,
     }),
   });
-  const res = await data.json();
-  return res;
+  const data = await res.json();
+  return data;
 };
 
-export { createMeetingAsync };
+const getMeetingAsync = async ({ id }) => {
+  const res = await fetch(`${BASE_URL}/${id}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  const data = await res.json();
+  return data;
+};
+
+export { createMeetingAsync, getMeetingAsync };
