@@ -10,6 +10,7 @@ import { isEqual } from "date-fns";
 import Toast from "../components/shared/Toast";
 import useToast from "../hooks/useToast";
 import { createMeetingAsync } from "../api/meeting";
+import { useNavigate } from "react-router-dom";
 
 const INITIAL_TIME = { start: "12-am", end: "12-am" };
 
@@ -19,6 +20,8 @@ export default function MainPage() {
   const [selectedDates, setSelectedDates] = useState(null);
 
   const { isOpen, message, openToast, closeToast } = useToast();
+
+  const navigate = useNavigate();
 
   const handleSelect = useCallback(
     (newSelected) => {
@@ -38,6 +41,7 @@ export default function MainPage() {
   const createMeeting = async ({ name, time, dates }) => {
     const res = await createMeetingAsync({ name, time, dates });
     console.log("res:", res);
+    navigate(`/meeting/${res.id}`);
   };
 
   const validateForm = () => {
