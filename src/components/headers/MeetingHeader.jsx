@@ -1,8 +1,7 @@
-import SidebarWrap from "../shared/SidebarWrap";
-
 import styles from "./MeetingHeader.module.scss";
 
 import shareIcon from "../../assets/share.svg";
+import SidebarWrap from "../shared/SidebarWrap";
 
 export default function MeetingHeader({ title }) {
   return (
