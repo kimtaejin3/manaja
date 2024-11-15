@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getMeetingAsync } from "../api/meeting";
 import MeetingHeader from "../components/headers/MeetingHeader";
 import { useParams } from "react-router-dom";
+import TimeTable from "../components/shared/TimeTable";
 
 export default function MeetingPage() {
   const { id } = useParams();
@@ -31,6 +32,7 @@ export default function MeetingPage() {
   return (
     <>
       <MeetingHeader title={meeting.name} />
+      <TimeTable />
     </>
   );
 }

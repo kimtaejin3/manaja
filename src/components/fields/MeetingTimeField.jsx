@@ -4,6 +4,7 @@ import styles from "./MeetingTimeField.module.scss";
 
 import clockIcon from "../../assets/clock.svg";
 
+// TODO: export default 따로 빼기
 export default function MeetingTimeField({ time, onSelect }) {
   return (
     <Field className={styles.container} title="회의 시간대 정하기">

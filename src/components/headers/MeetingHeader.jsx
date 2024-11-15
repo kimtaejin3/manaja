@@ -9,6 +9,7 @@ export default function MeetingHeader({ title }) {
       <div>
         <h1>{title}</h1>
       </div>
+      {/* todo: buttonsWrap 클래스명 수정하기 */}
       <div className={styles.buttonsWrap}>
         <button>
           <img src={shareIcon} alt="share_icon" />

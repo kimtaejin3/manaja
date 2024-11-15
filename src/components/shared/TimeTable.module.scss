@@ -1,0 +1,15 @@
+.container {
+  &,
+  th,
+  td {
+    border: 1.5px solid rgb(116, 115, 115);
+    background-color: rgb(238, 238, 238);
+    border-collapse: collapse;
+  }
+
+  td,
+  th {
+    width: 100px;
+    height: 20px;
+  }
+}
